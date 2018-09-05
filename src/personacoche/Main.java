@@ -15,7 +15,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
+        Persona p1 = new Persona("tomas estrada", "43588075Q", 'M');
+        
+        Coche c1 = new Coche("12345ABC", "Toyota", "vuela", 1200);
     }
     
 }
@@ -27,18 +30,18 @@ El pequeño proyecto está desglosado en diferentes tareas para que usted pueda 
 recomienda probar cada funcionalidad tras completarla y no esperar al final para probarlo todo.
 
 Hoja de ruta
-[] Crea un nuevo proyecto Java con una clase llamada "Coche", además de la clase que se te generará automáticamente.
+[x] Crea un nuevo proyecto Java con una clase llamada "Coche", además de la clase que se te generará automáticamente.
 
-[] Esta clase tendrá como atributos la marca, modelo, cv, cc (cilindrada, debe ser un nº decimal), diesel? (True / false), 
+[x] Esta clase tendrá como atributos la marca, modelo, cv, cc (cilindrada, debe ser un nº decimal), diesel? (True / false), 
    matrícula y precio.
 
-[] Crea una segunda clase llamada "Persona" con los siguientes atributos: nombre, DNI, altura, peso, sexo (H o D) y el 
+[x] Crea una segunda clase llamada "Persona" con los siguientes atributos: nombre, DNI, altura, peso, sexo (H o D) y el 
    coche de la persona.
 
-[] La clase Coche tendrá dos constructores: uno para poder crear coches a partir de lamatrícula, marca, modelo y cv y el 
+[x] La clase Coche tendrá dos constructores: uno para poder crear coches a partir de lamatrícula, marca, modelo y cv y el 
    otro para hacerlo a partir de la matrícula, cc y precio.
 
-[] La clase Persona tendrá tres constructores: uno para poder crear personas a partir del nombre, DNI y sexo, otro para 
+[x] La clase Persona tendrá tres constructores: uno para poder crear personas a partir del nombre, DNI y sexo, otro para 
    hacerlo a partir del DNI, altura y peso y un último para crearlas a partir del DNI y el su coche.
 
 [] En main del proyecto crea Coches y Personas de las diferentes maneras posibles para comprobar el correcto funcionamiento 
