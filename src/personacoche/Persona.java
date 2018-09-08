@@ -11,8 +11,9 @@ package personacoche;
  */
 public class Persona {
     String nombre, DNI;
-    float altura, peso;
-    char sexo; // soolo se puede usar las letras H = hombre y M = mujer 
+    float peso;
+    int altura;  // est valor estara en centimetros.
+    char sexo; // solo se puede usar las letras H = hombre y M = mujer 
     Coche cochePersona;
 
     //CONSTRUCTORES
@@ -22,7 +23,7 @@ public class Persona {
         this.sexo = sexo;
     }
     
-    public Persona (String DNI, float altura, float peso){
+    public Persona (String DNI, int altura, float peso){
         this.DNI = DNI;
         this.altura = altura;
         this.peso = peso;
@@ -33,9 +34,65 @@ public class Persona {
         this.cochePersona = cochePersona;
     }
     
+    //GETTER
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public Coche getCochePersona() {
+        return cochePersona;
+    }
     
+    //SETTER
+    public void setPeso(float peso){  // El peso no puede ser negativo
+        if(peso >= 0){
+            this.peso = peso; 
+        }
+    }
+    
+    public void setSexo(char sexo){  // sólo tenemos que aceptar los valores válidos
+        this.sexo = sexo;
+    }
+    
+    public void setDni(String DNI){  // comprobar que tenga exactamente 9 caracteres
+        int cantidadLetras = DNI.length();  // solo deben de se 9 letras o numeros.
+        if(cantidadLetras == 9){
+            this.DNI = DNI;
+        } 
+    }
+    
+    
+    public String DetalleSexo(){  // Con esto solo se podra agregar las letras H o M
+        String detalle = "";
+        if(sexo == 109 || sexo == 77){
+            detalle = "Mujer";
+        }
+        else if(sexo == 72 || sexo == 104){
+            detalle = "Hombre";
+        }
+        return detalle;
+    }
+    
+    // Metodo que devolbera detalles de la persona.
+    public String getDetallePersona(){
+        return "\nNombre: " + nombre + 
+                "\nDNI: " + DNI + 
+                "\nPeso: " + peso + " kilogramos" +
+                "\nAltura: " + altura + " Centimetros" +  
+                "\nSexo: " + DetalleSexo() +
+                "\nDetalle de Coche: " ;
+    }
     
 }
+
+
+
+
 
 /*
 [] Crea una segunda clase llamada "Persona" con los siguientes atributos: nombre, DNI, altura, peso, sexo (H o M) y el 
@@ -43,4 +100,13 @@ public class Persona {
 
 [] La clase Persona tendrá tres constructores: uno para poder crear personas a partir del nombre, DNI y sexo, otro para 
    hacerlo a partir del DNI, altura y peso y un último para crearlas a partir del DNI y el su coche.
+
+[] Ahora generarás algunos getters y setters para las dos clases. Para la clase Coche queremos disponer de getters para los 
+   atributos matrícula, diesel? y precio, mientras que para la clase Persona queremos getters para los atributos DNI, altura 
+   y coche.
+
+[] Para la clase Persona queremos setters para los atributos peso (no puede ser negativo), sexo (sólo tenemos que aceptar los 
+   valores válidos) y DNI (sabríais comprobar que tenga exactamente 9 caracteres?)
+
+
 */

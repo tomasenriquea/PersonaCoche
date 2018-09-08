@@ -15,10 +15,60 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
-        Persona p1 = new Persona("tomas estrada", "43588075Q", 'M');
-        
+       
+        System.out.println("Coches--------------------------------------------");
+        //public Coche(String matricula, String marca, String modelo, int cv)
         Coche c1 = new Coche("12345ABC", "Toyota", "vuela", 1200);
+        System.out.println(c1.getDetallesCoche());
+        c1.setMarca("For");  // aqui se verifica que solo se pueda ingresar las opciones 'Ford' o 'Honda'
+        System.out.println(c1.getDetallesCoche());
+        
+        
+        
+        // public Coche(String matricula, int cc, float precio)
+        Coche c2 = new Coche("98765AC", 1200, 5500.95f);
+        System.out.println(c2.getDetallesCoche());
+        c2.setCc(2.2f);  // // aqui se verifica que solo se pueda ingresar los valores 1.6, 1.8, 2.0, 2.2
+        System.out.println(c2.getDetallesCoche());
+        
+        
+        
+        System.out.println("------------------------------------------------------------");
+        System.out.println("\nPersonas--------------------------------------------");
+        
+        // public Persona(String nombre, String DNI, char sexo)
+        System.out.println("\nPERSONA 1");
+        Persona p1 = new Persona("tomas estrada", "43588075Q", 'h');
+        System.out.println(p1.getDetallePersona());
+        
+        
+        
+        // public Persona(String DNI, Coche cochePersona)
+        System.out.println("\nPERSONA 2");
+        Persona p2 = new Persona("X9893913A", c1);  // aqui se esta pasando el objeto c1 --> pendiente de verificar
+        System.out.println(p2.getDetallePersona());
+        p2.setDni("43588075Qa");  // Aqui se verifica que sean 9 letras
+        System.out.println(p2.getDetallePersona());
+        
+        
+        
+        // public Persona (String DNI, int altura, float peso)
+        System.out.println("\nPERSONA 3");
+        Persona p3 = new Persona("12345678A", 165, 82.5f);
+        System.out.println(p3.getDetallePersona());
+        p3.setPeso(23.5f);  // Aqui se verifica que el peso solo sea positivo
+        System.out.println(p3.getDetallePersona());
+        
+        
+        
+        System.out.println("------------------------------------------------------------");
+        
+        
+  
+        
+      
+       
+        
     }
     
 }
@@ -45,13 +95,13 @@ Hoja de ruta
    hacerlo a partir del DNI, altura y peso y un último para crearlas a partir del DNI y el su coche.
 
 [] En main del proyecto crea Coches y Personas de las diferentes maneras posibles para comprobar el correcto funcionamiento 
-   de los constructores.
+   de los constructores. --> FALTA EL OBJETO DENTRO DE p2
 
-[] Ahora generarás algunos getters y setters para las dos clases. Para la clase Coche queremos disponer de getters para los 
+[x] Ahora generarás algunos getters y setters para las dos clases. Para la clase Coche queremos disponer de getters para los 
    atributos matrícula, diesel? y precio, mientras que para la clase Persona queremos getters para los atributos DNI, altura 
    y coche.
 
-[] Para la clase Coche queremos disponer de setters para los atributos cc (valores posibles: 1.6, 1.8, 2.0, 2.2) y marca 
+[x] Para la clase Coche queremos disponer de setters para los atributos cc (valores posibles: 1.6, 1.8, 2.0, 2.2) y marca 
    (valores posibles: "Honda", "Ford"), mientras que para la clase Persona queremos setters para los atributos peso (no 
    puede ser negativo), sexo (sólo tenemos que aceptar los valores válidos) y DNI (sabríais comprobar que tenga exactamente 9 
    caracteres?)
