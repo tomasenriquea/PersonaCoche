@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package personacoche;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 
 /**
  *
@@ -14,7 +19,8 @@ public class Persona {
     float peso;
     int altura;  // est valor estara en centimetros.
     char sexo; // solo se puede usar las letras H = hombre y M = mujer 
-    Coche cochePersona;
+    Date Fnacimiento;
+    private Coche cochePersona;  // esto es una variable de tipo clase
 
     //CONSTRUCTORES
     public Persona(String nombre, String DNI, char sexo){
@@ -67,7 +73,7 @@ public class Persona {
     }
     
     
-    public String DetalleSexo(){  // Con esto solo se podra agregar las letras H o M
+    private String DetalleSexo(){  // Con esto solo se podra agregar las letras H o M
         String detalle = "";
         if(sexo == 109 || sexo == 77){
             detalle = "Mujer";
@@ -78,20 +84,34 @@ public class Persona {
         return detalle;
     }
     
-    // Metodo que devolbera detalles de la persona.
-    public String getDetallePersona(){
-        return "\nNombre: " + nombre + 
-                "\nDNI: " + DNI + 
-                "\nPeso: " + peso + " kilogramos" +
-                "\nAltura: " + altura + " Centimetros" +  
-                "\nSexo: " + DetalleSexo() +
-                "\nDetalle de Coche: " ;
+
+    // Metodo que devolvera detalles de la persona y su coche.
+    public void getDetallePersona(){
+        System.out.println("\nNombre: " + nombre + 
+                           "\nDNI: " + DNI + 
+                           "\nPeso: " + peso + " kilogramos" +
+                           "\nAltura: " + altura + " Centimetros" +  
+                           "\nSexo: " + DetalleSexo() +
+                           "\nDetalle de Coche: ");
+	if (cochePersona != null)
+	{
+            System.out.println(cochePersona.getDetallesCoche());
+	}
     }
+    
     
 }
 
 
-
+/*
+"\nMarca: " + marca + 
+"\nModelo: " + modelo + 
+"\nMatricula: " + matricula + 
+"\nCaballos de Fuerza cv: " + cv + 
+"\nCilindrada cc: " + cc + 
+"\nEs Diesel: " + diesel + 
+"\nPrecio: " + precio;
+*/
 
 
 /*

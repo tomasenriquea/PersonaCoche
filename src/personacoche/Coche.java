@@ -61,26 +61,15 @@ public class Coche {
     
     //Metodo para ver los datos introducidos.
     public String getDetallesCoche(){
-        return "\nMarca: " + marca + 
-                "\nModelo: " + modelo + 
-                "\nMatricula: " + matricula + 
-                "\nCaballos de Fuerza cv: " + cv + 
-                "\nCilindrada cc: " + cc + 
-                "\nEs Diesel: " + diesel + 
-                "\nPrecio: " + precio;
+        return "\n\tMarca: " + marca + 
+                "\n\tModelo: " + modelo + 
+                "\n\tMatricula: " + matricula + 
+                "\n\tCaballos de Fuerza cv: " + cv + 
+                "\n\tCilindrada cc: " + cc + 
+                "\n\tEs Diesel: " + diesel + 
+                "\n\tPrecio: " + precio;
     }
-        
-    
-    /*
-    
-    String marca, modelo, matricula;
-    int cv; // caballos de fuerza
-    float cc;  // cilindrada en decimales
-    boolean diesel; 
-    float precio;
-    
-    
-    */
+      
     
     
 }
