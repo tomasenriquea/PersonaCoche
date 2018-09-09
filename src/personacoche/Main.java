@@ -62,13 +62,12 @@ public class Main {
         p3.getDetallePersona();
         p3.setPeso(23.5f);  // Aqui se verifica que el peso solo sea positivo
         p3.getDetallePersona();
-        
-        
-        
+       
         System.out.println("------------------------------------------------------------");
+        System.out.println("\nPERSONA 4 con fecha de nacimiento");
         
-        
-  
+        Persona p4 = new Persona("Enrique Torres", 1980, 1, 7);
+        p4.getDetallePersona();
         
       
        
@@ -98,8 +97,8 @@ Hoja de ruta
 [x] La clase Persona tendrá tres constructores: uno para poder crear personas a partir del nombre, DNI y sexo, otro para 
    hacerlo a partir del DNI, altura y peso y un último para crearlas a partir del DNI y el su coche.
 
-[] En main del proyecto crea Coches y Personas de las diferentes maneras posibles para comprobar el correcto funcionamiento 
-   de los constructores. --> FALTA EL OBJETO DENTRO DE p2
+[x] En main del proyecto crea Coches y Personas de las diferentes maneras posibles para comprobar el correcto funcionamiento 
+   de los constructores.
 
 [x] Ahora generarás algunos getters y setters para las dos clases. Para la clase Coche queremos disponer de getters para los 
    atributos matrícula, diesel? y precio, mientras que para la clase Persona queremos getters para los atributos DNI, altura 
@@ -110,15 +109,15 @@ Hoja de ruta
    puede ser negativo), sexo (sólo tenemos que aceptar los valores válidos) y DNI (sabríais comprobar que tenga exactamente 9 
    caracteres?)
 
-[] Finalmente queremos que cada una de las clases disponga de un método que muestre por pantalla (System.out) los datos del 
+[x] Finalmente queremos que cada una de las clases disponga de un método que muestre por pantalla (System.out) los datos del 
    objeto (el valor de sus atributos). Hay que tener en cuenta que cuando se muestren por pantalla los datos de la persona 
    también es necesario mostrar las del coche que tiene!
 
-[] Realiza las comprobaciones necesarias para asegurar el correcto funcionamiento de tu programa.
+[x] Realiza las comprobaciones necesarias para asegurar el correcto funcionamiento de tu programa.
 
-[] Si no lo has hecho, prueba a mostrar los datos de una persona que tenga coche y de otra que no lo tenga. Encuentras algún 
+[x] Si no lo has hecho, prueba a mostrar los datos de una persona que tenga coche y de otra que no lo tenga. Encuentras algún 
    problema? En caso afirmativo, intenta pensar como resolverlo.
 
-[] [Opcional]: añada un atributo a la clase Persona que sea fecha de nacimiento. Este atributo debe ser de tipo Date, así que 
+[x] [Opcional]: añada un atributo a la clase Persona que sea fecha de nacimiento. Este atributo debe ser de tipo Date, así que 
    tendrá que ver cómo crear fechas en Java!
 */

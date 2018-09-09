@@ -19,10 +19,16 @@ public class Persona {
     float peso;
     int altura;  // est valor estara en centimetros.
     char sexo; // solo se puede usar las letras H = hombre y M = mujer 
-    Date Fnacimiento;
+    Date fNacimiento;
     private Coche cochePersona;  // esto es una variable de tipo clase
 
     //CONSTRUCTORES
+    public Persona(String nombre, int anyo, int mes, int dia){
+        this.nombre = nombre;
+        GregorianCalendar nacimiento =  new GregorianCalendar(anyo, mes - 1, dia);
+        this.fNacimiento = nacimiento.getTime();
+    }
+    
     public Persona(String nombre, String DNI, char sexo){
         this.nombre = nombre;
         this.DNI = DNI;
@@ -91,6 +97,7 @@ public class Persona {
                            "\nDNI: " + DNI + 
                            "\nPeso: " + peso + " kilogramos" +
                            "\nAltura: " + altura + " Centimetros" +  
+                           "\nFecha de nacimiento: " + fNacimiento +
                            "\nSexo: " + DetalleSexo() +
                            "\nDetalle de Coche: ");
 	if (cochePersona != null)
@@ -101,18 +108,6 @@ public class Persona {
     
     
 }
-
-
-/*
-"\nMarca: " + marca + 
-"\nModelo: " + modelo + 
-"\nMatricula: " + matricula + 
-"\nCaballos de Fuerza cv: " + cv + 
-"\nCilindrada cc: " + cc + 
-"\nEs Diesel: " + diesel + 
-"\nPrecio: " + precio;
-*/
-
 
 /*
 [] Crea una segunda clase llamada "Persona" con los siguientes atributos: nombre, DNI, altura, peso, sexo (H o M) y el 
@@ -128,5 +123,7 @@ public class Persona {
 [] Para la clase Persona queremos setters para los atributos peso (no puede ser negativo), sexo (sólo tenemos que aceptar los 
    valores válidos) y DNI (sabríais comprobar que tenga exactamente 9 caracteres?)
 
+[] [Opcional]: añada un atributo a la clase Persona que sea fecha de nacimiento. Este atributo debe ser de tipo Date, así que 
+   tendrá que ver cómo crear fechas en Java!
 
 */
